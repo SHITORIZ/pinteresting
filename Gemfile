@@ -23,6 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # adding boostrap to gem bundle
 gem 'bootstrap-sass'
 gem 'devise', '~> 3.5.2.rc2'
+gem 'paperclip', '~> 4.3'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
