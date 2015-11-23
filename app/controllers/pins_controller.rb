@@ -35,7 +35,7 @@ class PinsController < ApplicationController
   end
 
   def destroy
-    @pin.destroy
+    if @pin.destroy
     redirect_to pins_url
   end
 
@@ -45,7 +45,7 @@ class PinsController < ApplicationController
       @pin = Pin.find(params[:id])
     end
 
-    def correct_user
+    def current_user
       @pin = current_user.pins.find_by(params[:id])
       redirect_to pins_path, notice: "Not authorized to edit this pin" if @pin.nil?
     end
