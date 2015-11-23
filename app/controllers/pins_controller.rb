@@ -36,7 +36,8 @@ class PinsController < ApplicationController
 
   def destroy
     if @pin.destroy
-    redirect_to pins_url
+      redirect_to pins_url
+    end
   end
 
   private
